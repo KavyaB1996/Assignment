@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+ background-image: url(/Images/HD/bgnd3.jpg);
+ background-size: cover;
+}
+
+form{
+
+     background-image: url(/Images/HD/tree.jpg); 
+     background-size: cover; 
+    /* background-color:orange;  */
+    padding: 2em;
+    margin-left: 30em;
+    margin-top: 5em;
+    line-height: 2em;
+    /* border: 2px solid black; */
+    
+}
+
+
+
+label{
+    color:white;
+}
+.signupbtn{
+    /*border: red 2px solid;*/
+    line-height: 5em;
+}
