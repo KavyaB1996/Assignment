@@ -11,16 +11,17 @@
 
     <!-- Form starts here -->
     <!-- <div class = "row"> -->
-         <form class = "col-lg-4">
+         <form class = "col-lg-4" action="index.html" onsubmit = "return validate()">
 
           
             <div class="col-lg-10">
               <label for="inputEmail4" class="form-label" >Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email ID">
+              <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Email ID" required>
+              <label id="error_m"></label>
               </div>
             <div class="col-md-8">
               <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password" required>
             </div>
             <div class="col-12 signupbtn"> 
               <button type="submit" class="btn btn-primary">Log In</button>
@@ -31,6 +32,8 @@
           
 
     <!-- Form ends here -->
+    <!-- Linking script file -->
+    <script src = "JS/login.js"></script>
 
 </body>
 </html>

@@ -13,33 +13,72 @@
 
     <!-- Form starts here -->
     <!-- <div class = "row"> -->
-         <form class = "col-lg-4">
-           <div class = row>
+         <form class = "col-lg-4" action = "login.html" onsubmit = "return validate()">
+           <div class = "row">
           <div class="col-lg-6">
             <label for="inputfirstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="inputfirstname" placeholder="Enter first name">
+            <input type="text" class="form-control" id="inputfirstname" placeholder="Enter first name" required>
+            <label id="error_n"></label>
             </div>
             <div class="col-lg-6">
               <label for="inputsecondname" class="form-label">Second Name</label>
-              <input type="text" class="form-control" id="inputsecondname" placeholder="Enter second name" >
+              <input type="text" class="form-control" id="inputsecondname" placeholder="Enter second name" required >
+            </div>
               </div>
-          </div>
-          
-            <div class="col-lg-10">
+
+              <div class="col-lg-10">
               <label for="inputEmail4" class="form-label" >Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email ID">
+              <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Email ID" required>
+              <label id="error_m"></label>
               </div>
               <div class="col-lg-8">
                 <label for="inputmobileno" class="form-label">Mobile No.</label>
-                <input type="text" class="form-control" id="inputmobileno" placeholder="Enter your mobile no.">
+                <input type="text" class="form-control" id="inputmobileno" placeholder="Enter your mobile no." required>
+              <label id="error_p"></label>
                 </div>
             <div class="col-md-8">
               <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your password" required>
+
+
+            <!-- Progress Bar -->
+
+              <!-- <div class = "row">
+                <div class = "col-lg-12">
+              <progress hidden id="strength1" max = "100" value="0"></progress>
+              <progress hidden id="strength2" max = "100" value="0"></progress>
+              <progress hidden id="strength3" max = "100" value="0"></progress>
             </div>
+            </div> -->
+
+            
+            <!-- <div class = "row">
+              <div class = "col-sm-3">
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"  ></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" ></div>
+              </div>
+            <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" ></div>
+            </div>
+          </div>
+          </div> -->
+
+
+          <div class="progress"  style="height: 6px"id = "progress" hidden>
+            <div  class="progress-bar bg-danger" hidden id = "strength1" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="90"></div>
+            <div  class="progress-bar bg-warning" hidden id = "strength2" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="90"></div>
+            <div  class="progress-bar bg-success" hidden  id = "strength3" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="90"></div>
+          </div>
+          <label id="comment"></label>
+          </div>
+
             <div class="col-md-8">
               <label for="inputPassword4" class="form-label">Retype Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Retype your password">
+              <input type="password" class="form-control" id="RetypePassword" placeholder="Retype your password"  required>
+              <label id="error_pwd"></label>
             </div>
           
           
@@ -48,6 +87,9 @@
             </div>
           </form>  
     <!-- Form ends here -->
+
+    <!-- Linking script file -->
+    <script src = "JS/signup.js"></script>
 
 </body>
 </html>
